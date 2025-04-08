@@ -1,0 +1,4 @@
+pandas==2.2.3
+python-dotenv==1.0.1
+vllm==0.7.1
+bitsandbytes==0.45.1
