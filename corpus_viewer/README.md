@@ -11,30 +11,30 @@ Alternatively, you can use a containerized version by installing:
 * Docker (tested on version 28.0.1)
 
 ### Configuration
-Enter in `corpus_viewer` folder
+Enter in `corpus_viewer` folder:
 ```sh
 cd corpus_viewer
 ```
 
 ### Using `python` and `pip`
-Create a virtual environment
+Create a virtual environment:
 ```sh
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install dependencies
+Install dependencies:
 ```sh
 pip install -r requirements.txt
 ```
 
-Run the web application using `streamlit`
+Run the web application using `streamlit`:
 ```sh
 streamlit run streamlit_ui.py
 ```
 
 ### Using `docker`
-Run the web application using `docker compose`
+Run the web application using `docker compose`:
 ```sh
 docker compose up --build -d
 ```

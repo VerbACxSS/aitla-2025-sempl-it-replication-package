@@ -15,23 +15,23 @@ cd 1_prompt_experiment
 
 Create a `.env` file with following environment variable:
 ```
-OPENAI_API_KEY=....
+OPENAI_API_KEY=...
 ```
 
 ### Using `python` and `pip`
-Create a virtual environment
+Create a virtual environment:
 ```sh
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install dependencies
+Install dependencies:
 ```sh
 pip install -r requirements.txt
 ```
 
 ## Usage
-Run the following scripts to progressively simplify documents in `testing` folder.
+Run the following scripts to progressively simplify documents in `testing` folder:
 ```sh
 python 1_proofreading.py
 python 2_lex

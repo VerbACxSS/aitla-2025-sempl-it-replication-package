@@ -1,5 +1,5 @@
 # 2_dataset_generation
-Project used to extract `corpus_train`, `corpus_test` and `corpus_val` from `ItaIst` corpus.
+Project used to extract `corpus_train`, `corpus_val` and `corpus_test` from `ItaIst` corpus. It also generates the simplified `corpus_train` and `corpus_val`.
 
 ## Getting started
 ### Pre-requisites
@@ -14,19 +14,19 @@ cd 2_dataset_generation
 ```
 
 ### Using `python` and `pip`
-Create a virtual environment
+Create a virtual environment:
 ```sh
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install dependencies
+Install dependencies:
 ```sh
 pip install -r requirements.txt
 ```
 
 ## Usage
-Run the following scripts to extract `corpus_train`, `corpus_test` and `corpus_val` from `ItaIst` corpus:
+Run the following scripts to extract `corpus_train`, `corpus_val` and `corpus_test` from `ItaIst` corpus:
 ```sh
 python create_datasets.py
 ```
@@ -82,7 +82,7 @@ python 8_sentence_reorganizer.py
 # download 8_sentence_reorganizer_val_output.json
 ```
 
-Run the following script to generate the simplified of `corpus_train` and `corpus_val` from `*_train_output.jsonl` and `*_val_output.jsonl` files.
+Run the following script to generate the simplified of `corpus_train` and `corpus_val` from `*_train_output.jsonl` and `*_val_output.jsonl` files:
 ```sh
 python assembly_simplified_dataset.py
 ```

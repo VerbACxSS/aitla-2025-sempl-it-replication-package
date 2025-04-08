@@ -1,0 +1,10 @@
+pandas==2.2.3
+python-dotenv==1.0.1
+llamafactory@git+https://github.com/hiyouga/LLaMA-Factory
+liger-kernel==0.5.2
+tensorboard==2.18.0
+bitsandbytes==0.45.1
+
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1 
