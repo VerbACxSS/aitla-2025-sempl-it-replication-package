@@ -1,0 +1,9 @@
+services:
+  corpus_viewer:
+    container_name: 'corpus_viewer'
+    build: 
+      context: ../
+      dockerfile: corpus_viewer/Dockerfile
+    restart: "unless-stopped"
+    ports:
+      - "20099:8501"

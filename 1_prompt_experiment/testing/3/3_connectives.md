@@ -1,0 +1,5 @@
+Il tempo di preventivazione per gli allacciamenti fognari è il tempo intercorrente tra la data di ricevimento, da parte del gestore, della richiesta di preventivo e la data di invio del preventivo stesso al richiedente. Nella tabella denominata "Griglia degli standard", allegata alla presente Carta dei Servizi, sono indicati i livelli di qualità previsti per le prestazioni del gestore.
+
+In conformità alle prescrizioni contenute nel D.Lgs. 152/2006 e successive modifiche, nel Regolamento Regione Lombardia 6/2019 e successive modifiche e nel Regolamento del Servizio Idrico Integrato:
+- Gli scarichi di acque reflue assimilabili alle domestiche devono essere preventivamente autorizzati dall'Ufficio d'Ambito della Città Metropolitana di Milano, secondo le modalità impartite dagli artt. 4, 21 e 22 del Regolamento Regionale 6/2019;
+- Gli scarichi di acque reflue provenienti da insediamenti produttivi devono essere preventivamente autorizzati dalla Città Metropolitana di Milano, secondo le modalità da quest'ultima impartite. Una volta ottenuta l'autorizzazione, il relativo rinnovo dovrà essere richiesto un anno prima della scadenza.
