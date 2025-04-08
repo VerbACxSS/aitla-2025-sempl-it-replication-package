@@ -8,7 +8,7 @@ This project uses the `LLaMA-Factory` library. The following software are requir
 * Pip (tested with version 23.2.1)
 
 Moreover, a modern GPU with more then 30GB of VRAM is required to run the fine-tuning, for example:
-* NVIDIA L40S
+* `NVIDIA L40S` (48GB VRAM)
 
 The fine-tuning operation can be performed on a local `linux` machine or on a cloud provider (e.g., AWS, vast.ai). The fine-tuning operation requires at least one hour for each model. 
 

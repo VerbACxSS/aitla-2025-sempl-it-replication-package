@@ -4,7 +4,7 @@ from . import fs_utils
 
 
 def load_prompt(step_name: str) -> str:
-    return fs_utils.read_file(f'../openai_prompts/{step_name}.md')
+    return fs_utils.read_file(f'../assets/prompts/{step_name}.md')
 
 
 def load_few_shot(step_name: str) -> List[Tuple[str, str]]:
