@@ -8,7 +8,7 @@ CONFIGS = [
         'eval_dataset_name': 'proofreading_val',
         'output_dir': 'output/proofreading',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-proofreading',
+        'hub_model_id': 'VerbACxSS/sempl-it-proofreading-bnb',
     },
     # lex
     {
@@ -17,7 +17,7 @@ CONFIGS = [
         'eval_dataset_name': 'lex_val',
         'output_dir': 'output/lex',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-lex',
+        'hub_model_id': 'VerbACxSS/sempl-it-lex-bnb',
     },
     # connectives
     {
@@ -26,7 +26,7 @@ CONFIGS = [
         'eval_dataset_name': 'connectives_val',
         'output_dir': 'output/connectives',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-connectives',
+        'hub_model_id': 'VerbACxSS/sempl-it-connectives-bnb',
     },
     # expressions
     {
@@ -35,7 +35,7 @@ CONFIGS = [
         'eval_dataset_name': 'expressions_val',
         'output_dir': 'output/expressions',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-expressions',
+        'hub_model_id': 'VerbACxSS/sempl-it-expressions-bnb',
     },
     # sentence-splitter
     {
@@ -44,7 +44,7 @@ CONFIGS = [
         'eval_dataset_name': 'sentence_splitter_val',
         'output_dir': 'output/sentence-splitter',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-sentence-splitter',
+        'hub_model_id': 'VerbACxSS/sempl-it-sentence-splitter-bnb',
     },
     # nominalizations
     {
@@ -53,7 +53,7 @@ CONFIGS = [
         'eval_dataset_name': 'nominalizations_val',
         'output_dir': 'output/nominalizations',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-nominalizations',
+        'hub_model_id': 'VerbACxSS/sempl-it-nominalizations-bnb',
     },
     # verbs
     {
@@ -62,7 +62,7 @@ CONFIGS = [
         'eval_dataset_name': 'verbs_val',
         'output_dir': 'output/verbs',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-verbs',
+        'hub_model_id': 'VerbACxSS/sempl-it-verbs-bnb',
     },
     # sentence-reorganizer
     {
@@ -71,7 +71,7 @@ CONFIGS = [
         'eval_dataset_name': 'sentence_reorganizer_val',
         'output_dir': 'output/sentence-reorganizer',
         'base_model': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit',
-        'hub_model_id': 'VerbACxSS/sempl-it-sentence-reorganizer',
+        'hub_model_id': 'VerbACxSS/sempl-it-sentence-reorganizer-bnb',
     }
 ]
 

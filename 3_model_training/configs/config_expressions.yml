@@ -12,7 +12,7 @@ finetuning_type: lora
 flash_attn: fa2
 fp16: false
 gradient_accumulation_steps: 8
-hub_model_id: VerbACxSS/sempl-it-expressions
+hub_model_id: VerbACxSS/sempl-it-expressions-bnb
 learning_rate: 2.0e-05
 logging_steps: 5
 logging_strategy: steps

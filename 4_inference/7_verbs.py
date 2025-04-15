@@ -6,7 +6,7 @@ from utils import vllm_simplifier
 PROMPT = loader.load_prompt('7_verbs')
 
 if __name__ == "__main__":
-    simplifier = vllm_simplifier.Simplifier(model="VerbACxSS/sempl-it-verbs")
+    simplifier = vllm_simplifier.Simplifier(model="VerbACxSS/sempl-it-verbs-bnb")
 
     test_df = pd.read_csv("../corpus_test/corpus_test_simplified.csv", encoding="utf-8")
     test_df['verbs_text'] = test_df['nominalizations_text'].apply(lambda x: simplifier.simplify(PROMPT, x))
