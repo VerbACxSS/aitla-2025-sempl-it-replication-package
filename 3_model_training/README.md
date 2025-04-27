@@ -68,7 +68,7 @@ pip install --no-cache-dir flash-attn==2.7.2.post1 --no-build-isolation
 Rent a machine with more than 30GB VRAM (e.g., `NVIDIA L40S`) using the previous created template.
 
 Copy files on rented machine using `scp` command:
-```
+```sh
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ./configs      root@[vast_ai_ip]:/root/configs
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ./data         root@[vast_ai_ip]:/root/data
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  ./upload_to_hf.py root@[vast_ai_ip]:/root/upload_to_hf.py
