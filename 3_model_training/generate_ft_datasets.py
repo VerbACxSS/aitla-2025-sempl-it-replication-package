@@ -8,104 +8,104 @@ HARD_CONNECTIVES = loader.load_connectives()
 DATASET_INFOS = {
     # proofreading
     "proofreading_train": {
-        "prompt": "../openai_prompts/1_proofreading.md",
+        "prompt": "../assets/prompts/1_proofreading.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "text",	
         "output_col": "proofreading_text"
     },
     "proofreading_val": {
-        "prompt": "../openai_prompts/1_proofreading.md",
+        "prompt": "../assets/prompts/1_proofreading.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "text",
         "output_col": "proofreading_text"
     },
     # lex
     "lex_train": {
-        "prompt": "../openai_prompts/2_lex.md",
+        "prompt": "../assets/prompts/2_lex.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "proofreading_text",
         "output_col": "lex_text"
     },
     "lex_val": {
-        "prompt": "../openai_prompts/2_lex.md",
+        "prompt": "../assets/prompts/2_lex.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "proofreading_text",
         "output_col": "lex_text"
     },
     # connectives
     "connectives_train": {
-        "prompt": "../openai_prompts/3_connectives.md",
+        "prompt": "../assets/prompts/3_connectives.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "lex_text",
         "output_col": "connectives_text"
     },
     "connectives_val": {
-        "prompt": "../openai_prompts/3_connectives.md",
+        "prompt": "../assets/prompts/3_connectives.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "lex_text",
         "output_col": "connectives_text"
     },
     # expressions
     "expressions_train": {
-        "prompt": "../openai_prompts/4_expressions.md",
+        "prompt": "../assets/prompts/4_expressions.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "connectives_text",
         "output_col": "expressions_text"
     },
     "expressions_val": {
-        "prompt": "../openai_prompts/4_expressions.md",
+        "prompt": "../assets/prompts/4_expressions.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "connectives_text",
         "output_col": "expressions_text"
     },
     # sentence_splitter
     "sentence_splitter_train": {
-        "prompt": "../openai_prompts/5_sentence_splitter.md",
+        "prompt": "../assets/prompts/5_sentence_splitter.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "expressions_text",
         "output_col": "sentence_splitter_text"
     },
     "sentence_splitter_val": {
-        "prompt": "../openai_prompts/5_sentence_splitter.md",
+        "prompt": "../assets/prompts/5_sentence_splitter.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "expressions_text",
         "output_col": "sentence_splitter_text"
     },
     # nominalizations
     "nominalizations_train": {
-        "prompt": "../openai_prompts/6_nominalizations.md",
+        "prompt": "../assets/prompts/6_nominalizations.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "sentence_splitter_text",
         "output_col": "nominalizations_text"
     },
     "nominalizations_val": {
-        "prompt": "../openai_prompts/6_nominalizations.md",
+        "prompt": "../assets/prompts/6_nominalizations.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "sentence_splitter_text",
         "output_col": "nominalizations_text"
     },
     # verbs
     "verbs_train": {
-        "prompt": "../openai_prompts/7_verbs.md",
+        "prompt": "../assets/prompts/7_verbs.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "nominalizations_text",
         "output_col": "verbs_text"
     },
     "verbs_val": {
-        "prompt": "../openai_prompts/7_verbs.md",
+        "prompt": "../assets/prompts/7_verbs.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "nominalizations_text",
         "output_col": "verbs_text"
     },
     # sentence_reorganizer
     "sentence_reorganizer_train": {
-        "prompt": "../openai_prompts/8_sentence_reorganizer.md",
+        "prompt": "../assets/prompts/8_sentence_reorganizer.md",
         "dataset": "../corpus_train/corpus_train_simplified.csv",
         "input_col": "verbs_text",
         "output_col": "sentence_reorganizer_text"
     },
     "sentence_reorganizer_val": {
-        "prompt": "../openai_prompts/8_sentence_reorganizer.md",
+        "prompt": "../assets/prompts/8_sentence_reorganizer.md",
         "dataset": "../corpus_val/corpus_val_simplified.csv",
         "input_col": "verbs_text",
         "output_col": "sentence_reorganizer_text"

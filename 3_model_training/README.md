@@ -1,5 +1,5 @@
 # 3_model_training
-Project used to train the SEMPL-IT models. It fine-tunes the `4-bit bnb` quantized version of `Qwen/Qwen2.5-7B-Instruct` using PEFT technique (i.e., `qlora`).
+Project used to train the SEMPL-IT models. It fine-tunes the `4-bit bnb` and `awq` quantized versions of `Qwen/Qwen2.5-7B-Instruct` using PEFT technique (i.e., `qlora`).
 
 ## Getting started
 ### Pre-requisites
@@ -56,9 +56,13 @@ apt-get update && apt-get install --no-install-recommends -y nano git build-esse
 
 pip install --no-cache-dir python-dotenv==1.0.1
 pip install --no-cache-dir llamafactory@git+https://github.com/hiyouga/LLaMA-Factory
-pip install --no-cache-dir liger-kernel==0.5.2
-pip install --no-cache-dir tensorboard==2.18.0
+pip install --no-cache-dir liger-kernel==0.5.4
 pip install --no-cache-dir bitsandbytes==0.45.1
+pip install --no-cache-dir autoawq==0.2.8
+pip install --no-cache-dir tensorboard==2.19.0
+pip install --no-cache-dir nltk==3.9.1
+pip install --no-cache-dir jieba==0.42.1
+pip install --no-cache-dir rouge-chinese==1.0.3
 
 pip uninstall -y transformer-engine flash-attn ninja
 pip install --no-cache-dir ninja
@@ -69,7 +73,8 @@ Rent a machine with more than 30GB VRAM (e.g., `NVIDIA L40S`) using the previous
 
 Copy files on rented machine using `scp` command:
 ```sh
-scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ./configs      root@[vast_ai_ip]:/root/configs
+scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ./configs      root@[vast_ai_ip]:/root/configs_awq
+scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ./configs      root@[vast_ai_ip]:/root/configs_bnb
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ./data         root@[vast_ai_ip]:/root/data
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  ./upload_to_hf.py root@[vast_ai_ip]:/root/upload_to_hf.py
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  .env              root@[vast_ai_ip]:/root/.env
@@ -86,33 +91,52 @@ Run the following script to generate all the `*_train.json` and `*_val.json` dat
 python generate_ft_datasets.py
 ```
 
-Run the following script to generate all the `config_*.yml` files:
+Run the following scripts to generate all the `config_*.yml` files:
 ```sh
-python generate_ft_datasets.py
+python generate_ft_configs_awq.py
+python generate_ft_configs_bnb.py
 ```
 
 Run the following `llamafactory-cli` commands to start the SEMPL-IT fine-tunings:
 ```sh
-llamafactory-cli train ./configs/config_proofreading.yaml
-llamafactory-cli train ./configs/config_lex.yaml
-llamafactory-cli train ./configs/config_connectives.yaml
-llamafactory-cli train ./configs/config_expressions.yaml
-llamafactory-cli train ./configs/config_sentence-splitter.yaml
-llamafactory-cli train ./configs/config_nominalizations.yaml
-llamafactory-cli train ./configs/config_verbs.yaml
-llamafactory-cli train ./configs/config_sentence-reorganizer.yaml
+llamafactory-cli train ./configs_awq/config_proofreading.yaml
+llamafactory-cli train ./configs_awq/config_lex.yaml
+llamafactory-cli train ./configs_awq/config_connectives.yaml
+llamafactory-cli train ./configs_awq/config_expressions.yaml
+llamafactory-cli train ./configs_awq/config_sentence-splitter.yaml
+llamafactory-cli train ./configs_awq/config_nominalizations.yaml
+llamafactory-cli train ./configs_awq/config_verbs.yaml
+llamafactory-cli train ./configs_awq/config_sentence-reorganizer.yaml
+
+llamafactory-cli train ./configs_bnb/config_proofreading.yaml
+llamafactory-cli train ./configs_bnb/config_lex.yaml
+llamafactory-cli train ./configs_bnb/config_connectives.yaml
+llamafactory-cli train ./configs_bnb/config_expressions.yaml
+llamafactory-cli train ./configs_bnb/config_sentence-splitter.yaml
+llamafactory-cli train ./configs_bnb/config_nominalizations.yaml
+llamafactory-cli train ./configs_bnb/config_verbs.yaml
+llamafactory-cli train ./configs_bnb/config_sentence-reorganizer.yaml
 ```
 
 Run the following scripts to upload the fine-tuned model to Hugging Face:
 ```sh
-python upload_to_hf.py ./configs/config_proofreading.yaml
-python upload_to_hf.py ./configs/config_lex.yaml
-python upload_to_hf.py ./configs/config_connectives.yaml
-python upload_to_hf.py ./configs/config_expressions.yaml
-python upload_to_hf.py ./configs/config_sentence-splitter.yaml
-python upload_to_hf.py ./configs/config_nominalizations.yaml
-python upload_to_hf.py ./configs/config_verbs.yaml
-python upload_to_hf.py ./configs/config_sentence-reorganizer.yaml
+python upload_to_hf.py ./configs_awq/config_proofreading.yaml
+python upload_to_hf.py ./configs_awq/config_lex.yaml
+python upload_to_hf.py ./configs_awq/config_connectives.yaml
+python upload_to_hf.py ./configs_awq/config_expressions.yaml
+python upload_to_hf.py ./configs_awq/config_sentence-splitter.yaml
+python upload_to_hf.py ./configs_awq/config_nominalizations.yaml
+python upload_to_hf.py ./configs_awq/config_verbs.yaml
+python upload_to_hf.py ./configs_awq/config_sentence-reorganizer.yaml
+
+python upload_to_hf.py ./configs_bnb/config_proofreading.yaml
+python upload_to_hf.py ./configs_bnb/config_lex.yaml
+python upload_to_hf.py ./configs_bnb/config_connectives.yaml
+python upload_to_hf.py ./configs_bnb/config_expressions.yaml
+python upload_to_hf.py ./configs_bnb/config_sentence-splitter.yaml
+python upload_to_hf.py ./configs_bnb/config_nominalizations.yaml
+python upload_to_hf.py ./configs_bnb/config_verbs.yaml
+python upload_to_hf.py ./configs_bnb/config_sentence-reorganizer.yaml
 ```
 
 ## Built with

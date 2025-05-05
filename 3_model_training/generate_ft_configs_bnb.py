@@ -76,7 +76,7 @@ CONFIGS = [
 ]
 
 if __name__ == "__main__":
-    with open('config_template.yaml', 'r') as file:
+    with open('config_template_bnb.yaml', 'r') as file:
         config = yaml.safe_load(file)
 
     for CONFIG in CONFIGS:
@@ -86,5 +86,5 @@ if __name__ == "__main__":
         config['output_dir'] = CONFIG['output_dir']
         config['hub_model_id'] = CONFIG['hub_model_id']
 
-        with open(f'configs/config_{CONFIG["name"]}.yml', 'w') as file:
+        with open(f'configs_bnb/config_{CONFIG["name"]}.yml', 'w') as file:
             yaml.dump(config, file)

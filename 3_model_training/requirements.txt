@@ -1,9 +1,14 @@
 pandas==2.2.3
 python-dotenv==1.0.1
 llamafactory@git+https://github.com/hiyouga/LLaMA-Factory
-liger-kernel==0.5.2
-tensorboard==2.18.0
+liger-kernel==0.5.4
+tensorboard==2.19.0
 bitsandbytes==0.45.1
+autoawq==0.2.8
+
+nltk==3.9.1
+jieba==0.42.1
+rouge-chinese==1.0.3
 
 torch==2.5.1
 torchvision==0.20.1
