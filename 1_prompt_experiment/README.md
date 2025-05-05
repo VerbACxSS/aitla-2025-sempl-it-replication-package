@@ -34,7 +34,7 @@ pip install -r requirements.txt
 Run the following scripts to progressively simplify documents in `testing` folder:
 ```sh
 python 1_proofreading.py
-python 2_lex
+python 2_lex.py
 python 3_connectives.py
 python 4_expressions.py
 python 5_sentence_splitter.py

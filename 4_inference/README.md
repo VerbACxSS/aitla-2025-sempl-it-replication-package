@@ -1,5 +1,5 @@
 # 4_inference
-Project used to generate `corpus_test` using SEMPL-IT models inference.
+Project used to generate `corpus_test` using `bnb` SEMPL-IT models inference.
 
 ## Getting started
 ### Pre-requisites
