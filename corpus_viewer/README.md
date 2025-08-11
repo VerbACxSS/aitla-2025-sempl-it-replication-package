@@ -1,5 +1,5 @@
 # corpus viewer
-Streamlit web application used to visualize the `corpus_dev`, `corpus_val`, `corpus_train` and `corpus_test`.
+Streamlit web application used to visualize the `corpus_dev`, `corpus_val` and `corpus_test`.
 
 ## Getting started
 ### Pre-requisites
