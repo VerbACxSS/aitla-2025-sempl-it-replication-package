@@ -31,7 +31,7 @@ Run the following script to extract metrics from `corpus_train`, `corpus_val` an
 python metrics_extractor.py
 ```
 
-Run the following notebooks to visualize the metrics of `corpus_train`, `corpus_val` and `corpus_test`
+Run the following notebooks to visualize the metrics of `corpus_train`, `corpus_val` and `corpus_test`:
 ```sh
 corpus_train_metrics.ipynb
 corpus_val_metrics.ipynb
@@ -42,3 +42,6 @@ Run the following notebook to visualize the manual validation of the `corpus_tes
 ```sh
 corpus_test_manual_validation.ipynb
 ```
+
+## Built with
+* [italian-ats-evaluator](https://pypi.org/project/italian-ats-evaluator)

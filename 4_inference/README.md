@@ -56,7 +56,7 @@ pip install --no-cache-dir bitsandbytes==0.45.1
 Rent a machine with more than 12GB VRAM (e.g., `NVIDIA RTX4090`) using the previous created template.
 
 Copy files on rented machine using `scp` command:
-```
+```sh
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ../corpus_test     root@[vast_ai_ip]:/corpus_test
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ../assets  root@[vast_ai_ip]:/assets
 scp -i ~/.ssh/vast.ai -P [vast_ai_port]  -r ./utils       	  root@[vast_ai_ip]:/root/utils
